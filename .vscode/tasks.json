@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "PlantPilot: dev",
+			"type": "shell",
+			"command": "npm run dev",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "PlantPilot: build",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Initialize PlantPilot Git repository",
+			"type": "shell",
+			"command": "Set-Location 'C:\\Users\\2023user\\OneDrive\\바탕 화면\\3-2\\공부\\프론트\\PlantPilot'; git init -b main; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git add -A; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git status --short; git commit -m 'Build PlantPilot IoT plant-care demo' -m 'Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>'; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git remote add origin https://github.com/suyeon0528/PlantPilot.git; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git fetch origin main; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git log --oneline --decorate --all -5",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
